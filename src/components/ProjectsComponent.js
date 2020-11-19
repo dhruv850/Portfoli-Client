@@ -35,7 +35,7 @@ class ProjectsComponent extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            tabItem: ['All', 'Web', 'Mobile'],
+            tabItem: ['All', 'Big Projects', 'Small Projects'],
             selectedItem: 'All',
             projectItem: null,
             isDialogOpen: false,
@@ -141,18 +141,14 @@ class ProjectsComponent extends React.Component {
                                         <span className={'github-site-text'}>GITHUB</span>
                                     </div>
                                 </a>
-                                <a href={item.project_link} className={(item.type === 'Mobile/PlayStore' ? 'project-hyperlink' : 'project-hide-hyperlink')} rel="noopener" target="_blank">
-                                    <div className={'play-store-div'}>
-                                        <img src={playstore} className={'play-store-icon'} />
-                                    </div>
-                                </a>
+                               
                                 <a href={item.project_link} className={(item.type === 'Mobile/Youtube' ? 'project-hyperlink' : 'project-hide-hyperlink')} rel="noopener" target="_blank">
                                     <div className={'youtube-site-div'}>
                                         <img src={webIcon} className={'youtube-site-icon'} />
                                         <span className={'youtube-site-text'}>YOUTUBE VIDEO</span>
                                     </div>
                                 </a>
-                                <a href={item.project_link} className={((item.type === 'Web' || item.type === 'Mobile/Blog') && item.project_link !== 'N/A' ? 'project-hyperlink' : 'project-hide-hyperlink')} rel="noopener" target="_blank">
+                                <a href={item.project_link} className={((item.type === 'Web' || item.type === 'Big Projects' || item.type === "Small Projects") && item.project_link !== 'N/A' ? 'project-hyperlink' : 'project-hide-hyperlink')} rel="noopener" target="_blank">
                                     <div className={'visit-site-div'}>
                                         <img src={webIcon} className={'visit-site-icon'} />
                                         <span className={'visit-site-text'}>VISIT SITE</span>

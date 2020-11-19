@@ -38,10 +38,10 @@ class ProfileComponent extends React.Component {
                             I am a full stack developer specialized in Web Development, having sufficient knowledge in JavaScript frameworks and Cloud Technologies. I am currently working as MERN stack developer at <a className="anchor" href="https://www.tazwiz.com/">Tazwiz</a>, My roles over their includes developing full fledged API and Front-End components as well as creating automation for testing.
                             </p>
                         <p className={'dashboard-profile-deatils'}>
-                            I am AWS certified Solutions Architect - Associate which makes me familiar with more than 80 AWS cloud services. I use my weekend to write technical how-to-do's for <a className="anchor" href="https://contentlab.io/how-to-test-and-secure-your-api-using-postman-test-scripts/">DeveloperMedia</a> 
+                            I am AWS certified Solutions Architect - Associate which makes me familiar with more than 80 AWS cloud services. I use my weekend to write technical how-to-do's for <a className="anchor" href="https://contentlab.io/how-to-test-and-secure-your-api-using-postman-test-scripts/">DeveloperMedia.</a> 
                             </p>
                         <p className={'dashboard-profile-deatils'}>
-                            I make use of my extra bandwidth to share my knowledge via my blog site <a className="anchor" href="https://techtypers.com/">TechTypers</a> 
+                            I make use of my extra bandwidth to share my knowledge via my blog site <a className="anchor" href="https://techtypers.com/">TechTypers.</a> If you are a PvP gamer, do you want to challenge me 1v1 ?
                         </p>
                     </div>
                 </div>

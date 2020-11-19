@@ -23,7 +23,7 @@ class BlogsComponent extends React.Component {
         return (
             <div className={'blogs-parent-contents-container'}>
                 <p className={'blogs-text'}>
-                    Here are some of my popular blogs posted on my site, for more blogs please follow my <a href="https://hackbotone.com/" className={'blogs-details-link'} target="_blank">website</a>.
+                    Here are some of my articles and blogs posted, for more blogs please follow my <a href="https://techtypers.com/" className={'blogs-details-link'} target="_blank">website</a>.
                 </p>
                 <div className={'blogs-contents-container'}>
                     {results.length > 0 ? results.map(item =>
