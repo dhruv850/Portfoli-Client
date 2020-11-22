@@ -3,7 +3,7 @@ import "../css/index.css";
 
 import logo from '../images/ic_logo1.png';
 import down_arrow from '../images/ic_down_arrow.png';
-
+import Contact from './Contact';
 import ProfileComponent from './ProfileComponent';
 import SkillSetsComponent from './SkillSetsComponent';
 import ProjectsComponent from './ProjectsComponent';
@@ -44,7 +44,10 @@ class DashboardComponent extends React.Component {
         var tabItem = this.state.selectedItem;
         if (tabItem === 'HOME') {
             return (
+
                 <ProfileComponent />
+
+
             )
         }
         if (tabItem === 'SKILLS') {
@@ -61,7 +64,7 @@ class DashboardComponent extends React.Component {
             return (
                 <BlogsComponent />
             )
-        }
+        }    
     }
 
     render() {
@@ -97,7 +100,7 @@ class DashboardComponent extends React.Component {
                             <a href="#projects" className={'menu-item-txt'}><span>PROJECTS</span></a>
                             <a href="#blogs" className={'menu-item-txt'}><span>BLOGS</span></a>
                             <a href="#testimonials" className={'menu-item-txt'}><span>TESTIMONIALS</span></a>
-                            <a href="#contacts" className={'menu-item-txt'}><span>CONTACTS</span></a>
+                            <a href="#contacts" className={'menu-item-txt'}><span>CONTACT</span></a>
                         </div>
                     </div>
                     <ProfileComponent />
@@ -130,8 +133,11 @@ class DashboardComponent extends React.Component {
                     </div>
                     <div id={'contacts'} className={'contacts-parent-container'}>
                         <div className={'skills-container'}>
-                            <span className={'dashboard-skills-label'}>Contacts</span>
+                            <span className={'dashboard-skills-label'}>Contact</span>
                         </div>
+                        {/* <div className="contact-wrapper col-xl-12">
+                                <Contact/>
+                        </div> */}
                         <ContactsComponent />
                     </div>
                 </div>

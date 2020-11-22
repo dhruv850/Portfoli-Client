@@ -5,11 +5,10 @@ import { connect } from 'react-redux';
 import Modal from 'react-modal';
 
 import { fetchProjects } from '../actions';
-
+import CircularProgress from '@material-ui/core/CircularProgress';
 import closeIcon from '../images/ic_close.png';
 import githubIcon from '../images/ic_github_white.png';
 import webIcon from '../images/ic_web_site.png';
-import playstore from '../images/ic_google_playstore.png';
 
 const modalStyles = {
     overlay: {
@@ -164,8 +163,9 @@ class ProjectsComponent extends React.Component {
 
     render() {
         var results = JSON.parse(JSON.stringify(this.props.projects)).data;
-
+        
         return (
+            !this.props.projects.loading?
             <div className={'projects-parent-container'}>
                 <div className={'project-child-container'}>
                     <div className={'projects-tab-container'}>
@@ -183,6 +183,10 @@ class ProjectsComponent extends React.Component {
                     </div>
                 </div>
                 {this.openProjectDialog()}
+            </div>
+            :
+            <div className="m-3">
+            <CircularProgress />
             </div>
         );
     }

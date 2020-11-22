@@ -2,7 +2,7 @@ import React from 'react';
 import "../css/index.css";
 
 import { connect } from 'react-redux';
-
+import CircularProgress from '@material-ui/core/CircularProgress';
 import { fetchBlogs } from '../actions';
 
 class BlogsComponent extends React.Component {
@@ -21,6 +21,7 @@ class BlogsComponent extends React.Component {
         var results = JSON.parse(JSON.stringify(this.props.blogs)).data;
 
         return (
+            !this.props.blogs.loading?
             <div className={'blogs-parent-contents-container'}>
                 <p className={'blogs-text'}>
                     Here are some of my articles and blogs posted, for more blogs please follow my <a href="https://techtypers.com/" className={'blogs-details-link'} target="_blank">website</a>.
@@ -33,6 +34,10 @@ class BlogsComponent extends React.Component {
                     ) : null}
                 </div>
                 <div className={'projects-mobile-items-gap'}></div>
+            </div>
+            :
+            <div className="m-3">
+            <CircularProgress />
             </div>
         );
     }

@@ -2,6 +2,7 @@ import { FETCH_BLOGS } from '../actions/constants';
 
 const initialState = {
     data: '',
+    loading:true
 };
 
 const blogsReducer = (state = initialState, action) => {
@@ -10,6 +11,7 @@ const blogsReducer = (state = initialState, action) => {
             const newState = {
                 ...state,
                 data: action.payload,
+                loading:false
             };
             return newState;
         }

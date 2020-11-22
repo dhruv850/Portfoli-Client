@@ -2,7 +2,7 @@ import React from 'react';
 import "../css/index.css";
 
 import { connect } from 'react-redux';
-
+import CircularProgress from '@material-ui/core/CircularProgress';
 import { fetchSkillSets } from '../actions';
 
 class SkillSetsComponent extends React.Component {
@@ -50,9 +50,14 @@ class SkillSetsComponent extends React.Component {
     render() {
         var results = JSON.parse(JSON.stringify(this.props.skills)).data;
         return (
+            !this.props.skills.loading?
             <div className={'skills-parent-container'}>
                 {this.renderTechStacks(results)}
                 <div className={'skills-mobile-gap'}></div>
+            </div>
+            :
+            <div className="m-3">
+            <CircularProgress />
             </div>
         );
     }

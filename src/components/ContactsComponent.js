@@ -6,7 +6,7 @@ import twitter from '../images/ic_black_twitter.png';
 import linkedin from '../images/ic_black_linkedin.png';
 import github from '../images/ic_black_github.png';
 import techtypers from '../images/Logo_Favicon1.png';
-
+import email from '../images/ic_email.png';
 class ContactsComponent extends React.Component {
     constructor(props) {
         super(props);
@@ -23,6 +23,8 @@ class ContactsComponent extends React.Component {
         return (
             <div className={'contacts-contents-container'}>
                 <div className={'contacts-social-container'}>
+                  
+                    <a href="mailto:dhruv850.dpgmail.com?subject=Opportunity" target="_blank"><img src={email} className={'contact-social-img'}/></a>
                     <a href="https://www.facebook.com/profile.php?id=100001700571611" target="_blank"><img src={facebook} className={'contact-social-img'}/></a>
                     <a href="https://twitter.com/dhruv1451998" target="_blank"><img src={twitter} className={'contact-social-img'}/></a>
                     <a href="https://www.linkedin.com/in/dhruv850/" target="_blank"><img src={linkedin} className={'contact-social-img'}/></a>
