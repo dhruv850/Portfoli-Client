@@ -5,7 +5,9 @@ import {
     BLOGS_ENDPOINT,
     FETCH_SKILLS_SETS,
     FETCH_PROJECTS,
-    FETCH_BLOGS
+    FETCH_BLOGS,
+    FETCH_TESTIMONIALS,
+    TESTIMONIAL_ENDPOINT
 } from './constants';
 
 export const dispatchSkillSets = data => ({
@@ -23,11 +25,24 @@ export const dispatchBlogs = data => ({
     payload: data
 });
 
+export const dispatchTestimonials = data => ({
+    type: FETCH_TESTIMONIALS,
+    payload: data
+});
+
 export const fetchSkillSets = () => dispatch => {
     fetch(process.env.REACT_APP_API+SKILLS_ENDPOINT)
     .then(response =>  response.json())
     .then(data => {
        dispatch(dispatchSkillSets(data));
+    })
+}
+
+export const fetchTestimonials = () => dispatch => {
+    fetch(process.env.REACT_APP_API+TESTIMONIAL_ENDPOINT)
+    .then(response =>  response.json())
+    .then(data => {
+       dispatch(dispatchTestimonials(data));
     })
 }
 

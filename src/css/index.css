@@ -1559,7 +1559,8 @@ html, body {
   background-color: #212121;
 }
 .testimonial-text{
-  margin-top: 80px;
+  margin-top: 40px;
+  font-size: 12;
 }
 .testimonials-parent-container{
   width: 100vw;
@@ -1622,7 +1623,7 @@ html, body {
   padding: 0;
   margin: 0;
   font-style: italic;
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 .snip1574 h3 {
